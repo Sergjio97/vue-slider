@@ -21,7 +21,7 @@
                 <img :src="images[currentImg]">
 
                 <h1>{{title[currentTitle]}}</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi hic eum quidem, neque tempora quos dolor sequi voluptates beatae, quod praesentium non. Reiciendis quae quaerat vel perspiciatis reprehenderit voluptatibus maiores.</p>
+                <p>{{text[currentText]}}</p>
 
             </div>
 
@@ -34,13 +34,13 @@
                 <!-- *****START BOTTON***** -->
 
                 <div id="btn_next">
-                    <a href="#" @click="prevImg(), prevTitle()">
+                    <a href="#" @click="prevImg(), prevTitle(), prevText()">
                         <i class="fas fa-arrow-up"></i>
                     </a>
                 </div>
 
                 <div id="btn_back">
-                    <a href="#" @click="nextImg(), nextTitle()">
+                    <a href="#" @click="nextImg(), nextTitle(), nextText()">
                         <i class="fas fa-arrow-down"></i>
                     </a>
                 </div>

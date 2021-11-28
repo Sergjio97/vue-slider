@@ -39,15 +39,16 @@
 
 #main_slider h1 {
     position: absolute;
-    bottom: 20%;
-    left: 50%;
+    bottom: 30%;
+    left: 60%;
+    font-size: 50px;
 }
 
 #main_slider p {
-    font-size: 20px;
+    font-size: 30px;
     position: absolute;
     bottom: 10%;
-    left: 50%;
+    left: 60%;
 }
 
 /* *****END MAIN SLIDER***** */ 

@@ -17,7 +17,7 @@ const app = new Vue ({
         title: 
         
         [
-            "Goku",
+            "Son Goku",
             "Goku Super Sayan",
             "Goku Super Sayan liv 2",
             "Goku Super Sayan liv 3",
@@ -25,6 +25,18 @@ const app = new Vue ({
         ],
 
         currentTitle: 0,
+
+        text: 
+
+        [
+            "Son Goku appartiene al popolo guerriero dei Saiyan ed era stato inviato sulla Terra con la missione di distruggerne gli abitanti e conquistare il pianeta",
+            "Son Goku raggiunge questa potente trasformazione esplodendo di rabbia nello scontro con Freezer",
+            "Non si sa esattamente quando Son Goku ha raggiunto questa trasformazione, ma è stato dopo la battaglia con Cell, quando si allenava nell'Aldilà",
+            "Son Goku raggiunge questo stadio nell'Aldilà, in quanto li non si ha un corpo vero, quindi si può mettere tutta l'energia che si vuole",
+            "Questo è il 4° livello di Super Saiyan di Son Goku. Questa trasformazione viene raggiunta da Son Goku dopo aver ripreso il controllo dallo stadio di Oozaru Dorato, grazie a Pan"
+        ],
+
+        currentText: 0,
     },
 
     methods: {
@@ -59,8 +71,24 @@ const app = new Vue ({
             } else {
                 this.currentTitle--;
             }
-        }
+        },
+
+        nextText: function() {
+            if (this.currentText == this.text.length - 1){
+                this.currentText = 0;              
+            } else {
+                this.currentText++;
+            }  
+        },
+
+        prevText: function() {
+            if (this.currentText == 0){
+                this.currentText = this.text.length - 1;              
+            } else {
+                this.currentText--;
+            }
+        },
 
     }
-    
+
 });
