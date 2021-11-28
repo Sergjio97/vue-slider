@@ -34,8 +34,7 @@ const app = new Vue ({
                 this.currentImg = 0;              
             } else {
                 this.currentImg++;
-            }
-            
+            }           
         },
 
         prevImg: function() {
@@ -47,13 +46,21 @@ const app = new Vue ({
         },
 
         nextTitle: function() {
-            this.currentTitle++;
+            if (this.currentTitle == this.title.length - 1){
+                this.currentTitle = 0;              
+            } else {
+                this.currentTitle++;
+            }  
         },
 
         prevTitle: function() {
-            this.currentTitle--;
+            if (this.currentTitle == 0){
+                this.currentTitle = this.title.length - 1;              
+            } else {
+                this.currentTitle--;
+            }
         }
 
     }
-
+    
 });
