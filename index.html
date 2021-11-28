@@ -14,28 +14,59 @@
 
         <div id="slider">
 
-            <div id="main_slider"></div>
+            <!-- *****START MAIN SLIDER***** -->
+
+            <div id="main_slider">
+
+                <img :src="images[currentImg]">
+
+                <h1>{{title[currentTitle]}}</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi hic eum quidem, neque tempora quos dolor sequi voluptates beatae, quod praesentium non. Reiciendis quae quaerat vel perspiciatis reprehenderit voluptatibus maiores.</p>
+
+            </div>
+
+            <!-- *****END MAIN SLIDER***** -->
+
+            <!-- *****START THUMBS***** -->
 
             <div id="thumbs_box">
 
+                <!-- *****START BOTTON***** -->
+
                 <div id="btn_next">
-                    <a href="#">
+                    <a href="#" @click="prevImg(), prevTitle()">
                         <i class="fas fa-arrow-up"></i>
                     </a>
                 </div>
+
                 <div id="btn_back">
-                    <a href="#">
+                    <a href="#" @click="nextImg(), nextTitle()">
                         <i class="fas fa-arrow-down"></i>
                     </a>
                 </div>
 
-                <div id="thumb"></div>
-                <div id="thumb"></div>
-                <div id="thumb"></div>
-                <div id="thumb"></div>
-                <div id="thumb"></div>
+                <!-- *****END BOTTON***** -->
+
+                <div class="thumb" v-for="(image, index) in images" :class="index == currentImg ? 'active' : ''">
+                    <img :src="image">
+                </div>
+            
+                <!-- <div class="thumb">
+                    <img src="img/google-assistant-super-saiyan.webp" alt="">
+                </div>
+                <div class="thumb">
+                    <img src="img/foto-generiche-165263.jpg" alt="">
+                </div>
+                <div class="thumb">
+                    <img src="img/dragon-ball-z-goku-raggiunge-ssj3-cosplay-femminile-miyu-v3-533272-900x900.webp" alt="">
+                </div>
+                <div class="thumb">
+                    <img src="img/dragon-ball-super-5-motivi-rendere-super-saiyan-4-canonico-v3-460248.jpg" alt=""> -->
+                </div>
 
             </div>
+
+            <!-- *****END THUMBS***** -->
 
         </div>
 
